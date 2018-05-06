@@ -1,4 +1,9 @@
 <div>
-  <h1>{{pageHeader}}</h1>
+  <h1>
+    {{'Full Name = ' + getFullName()}}
+  </h1>
   <my-employee></my-employee>
+  <button [disabled]='isDisabled'>Click me</button>
+  <span [innerHtml] = 'pageHeader'></span>
+
 </div>
