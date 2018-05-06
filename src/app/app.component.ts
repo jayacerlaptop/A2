@@ -14,6 +14,8 @@ export class AppComponent {
   firstName: string = 'Tom';
   lastName: string = 'Hopkins';
   isDisabled: boolean = false;
+  fontSize: number = 30;
+  name: string = 'Tom';
 
 
   getFullName(): string {

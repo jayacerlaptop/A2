@@ -4,8 +4,13 @@
   </h1>
   <my-employee></my-employee>
   <button [disabled]='isDisabled'>Click me</button>
-  <span [innerHtml] = 'pageHeader'></span>
+  <span [innerHtml]='pageHeader'></span>
   <input id='inputId' type='text' value='Tom'>
   <button style="color:red">My Button</button>
-
+  <button (click)='onClick()'>Click me</button>
+  <h3> name :
+    <input [(ngModel)] = 'name'/>
+    <br/> You entered : {{name}}
+  </h3>
+  <list-employee></list-employee>
 </div>
