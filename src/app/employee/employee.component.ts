@@ -1,32 +1,35 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-employee',
-    templateUrl: './employee.component.html',
-    styleUrls: ['./employee.component.css']
-//     `<table>
-//     <tr>
-//     <td>First Name</td>
-//     <td>{{firstName}}</td>
-//     </tr>
-//     <tr>
-//     <td>Last Name</td>
-//         <td>{{lastName}}</td>
-//     </tr>
-//     <tr>
-//         <td>Gender</td>
-//         <td>{{gender}}</td>
-//     </tr>
-//     <tr>
-//         <td>Age</td>
-//         <td>{{age}}</td>
-//     </tr>
-// </table>`
+    selector: 'list-employee',
+    templateUrl: './employeeList.component.html',
+    styleUrls: ['./employeeList.component.css']
 })
-export class EmployeeComponent {
-    firstName: string = 'Tom';
-    lastName: string = 'Hopkins';
-    gender: string = 'Male';
-    age: number = 20;
-    columnSpan: number = 2;
+export class EmployeeListComponent {
+    employees: any[];
+
+    constructor() {
+        this.employees = [
+            {
+                code: 'emp101', name: 'Tom', gender: 'Male',
+                annualSalary: 5500, dateOfBirth: '6/25/1988'
+            },
+            {
+                code: 'emp102', name: 'Alex', gender: 'Male',
+                annualSalary: 5700.95, dateOfBirth: '9/6/1982'
+            },
+            {
+                code: 'emp103', name: 'Mike', gender: 'Male',
+                annualSalary: 5900, dateOfBirth: '12/8/1979'
+            },
+            {
+                code: 'emp104', name: 'Mary', gender: 'Female',
+                annualSalary: 6500.826, dateOfBirth: '10/14/1980'
+            },
+            {
+                code: 'emp105', name: 'Nancy', gender: 'Female',
+                annualSalary: 6700.826, dateOfBirth: '12/15/1982'
+            },
+        ];
+    }
 }
